@@ -1,0 +1,23 @@
+<!doctype html>
+<script>
+(function(){
+  window.r=function(x){
+    var n=+x.feed.openSearch$totalResults.$t;
+    var s=document.createElement('script');
+    s.src='https://16oc.blogspot.com/feeds/posts/summary?start-index='+(1+Math.floor(Math.random()*n))+'&max-results=1&alt=json-in-script&callback=r2';
+    document.head.appendChild(s)
+  };
+  window.r2=function(x){
+    var e=x.feed.entry&&x.feed.entry[0];
+    if(!e)return;
+    for(var i=0;i<e.link.length;i++)
+      if(e.link[i].rel=='alternate'){
+        location.replace(e.link[i].href);
+        return;
+      }
+  };
+  var s=document.createElement('script');
+  s.src='https://16oc.blogspot.com/feeds/posts/summary?max-results=0&alt=json-in-script&callback=r';
+  document.head.appendChild(s);
+})();
+</script>
