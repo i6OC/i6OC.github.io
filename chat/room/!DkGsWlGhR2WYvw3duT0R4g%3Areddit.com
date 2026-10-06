@@ -1,0 +1,1 @@
+<!doctype html><meta http-equiv="refresh" content="0;url=https://www.reddit.com/chat/room/!DkGsWlGhR2WYvw3duT0R4g%3Areddit.com">
